@@ -26,14 +26,14 @@ const generateAccessAndRefreshToken = async (userId) => {
 const registerUser = asyncHandler(async (req, res) => {
   const { fullName, userName, password, email } = req.body;
 
-  // get user details from frontend
-  // validation not empty
-  // check if user already exists: username, email // check for images, check for avatar
-  // upload them to cloudinary, avatar
-  // create user object - create entry in db
-  // remove password and refresh token field from response
-  // check for user creation
-  // return res
+  // 1. get user details from frontend
+  // 2. validation not empty
+  // 3. check if user already exists: username, email // check for images, check for avatar
+  // 4. upload them to cloudinary, avatar
+  // 5. create user object - create entry in db
+  // 6. remove password and refresh token field from response
+  // 7. check for user creation
+  // 8. return res
 
   if (
     [fullName, userName, password, email]?.some((field) => field?.trim() === "")
@@ -94,11 +94,11 @@ const registerUser = asyncHandler(async (req, res) => {
 });
 
 const loginUser = asyncHandler(async (req, res) => {
-  // req body -> data // username or email
-  //find the user
-  //password check
-  //access and referesh token
-  //send cookie
+  // 1. req body -> data // username or email
+  // 2. find the user
+  // 3. password check
+  // 4. access and referesh token
+  // 5. send cookie
 
   const { userName, email, password } = req.body;
 
@@ -370,5 +370,5 @@ export {
   getCurrentUser,
   updateAccountDetails,
   updateUserAvatar,
-  updateUserCoverImage
+  updateUserCoverImage,
 };
